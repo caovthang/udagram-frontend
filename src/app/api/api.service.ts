@@ -32,8 +32,7 @@ export class ApiService {
     this.token = token;
   }
 
-  get(endpoint): Promise<any> {
-    alert(API_HOST);
+  get(endpoint): Promise<any> {  
     const url = `${API_HOST}${endpoint}`;
     const req = this.http.get(url, this.httpOptions).pipe(map(ApiService.extractData));
 
